@@ -4,7 +4,7 @@
   try {
     const id = location.pathname.split("/").pop();
     const response = await fetch("/api/publico/" + id, {
-      credentials: "omit",
+      credentials: "same-origin",
       cache: "no-store",
     });
     if (!response.ok) throw Error();
